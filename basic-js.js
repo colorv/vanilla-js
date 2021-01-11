@@ -80,3 +80,39 @@ title.innerHTML = "Hi From JS";
 title.style.color = "red";
 document.title = "I own you now";
 console.dir(title);
+
+//querySelector, clickHandle
+const title = document.querySelector("#title");
+function handleClick() {
+  title.style.color = "blue";
+}
+title.addEventListener("click", handleClick);
+
+//if, else
+if (10 === 5) {
+  console.log("if");
+} else {
+  console.log("else");
+}
+
+//click event (if, else)
+const title = document.querySelector("#title");
+const BASE_COLOR = "rgb(52, 73, 94)";
+const OTHER_COLOR = "#7f8c8d";
+
+function handleClick() {
+  const currentColor = title.style.color;
+  console.log(currentColor);
+  if (currentColor === BASE_COLOR) {
+    title.style.color = OTHER_COLOR;
+  } else {
+    title.style.color = BASE_COLOR;
+  }
+}
+
+function init() {
+  title.style.color = BASE_COLOR;
+  title.addEventListener("mouseenter", handleClick);
+}
+
+init();
