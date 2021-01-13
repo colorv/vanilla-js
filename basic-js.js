@@ -88,6 +88,12 @@ function handleClick() {
 }
 title.addEventListener("click", handleClick);
 
+//handleResize
+function handleResize() {
+  console.log("Resize!!");
+}
+window.addEventListener("resize", handleResize);
+
 //if, else
 if (10 === 5) {
   console.log("if");
