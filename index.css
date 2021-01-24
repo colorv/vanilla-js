@@ -1,17 +1,45 @@
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
   background-color: #2c3e50;
+  overflow: hidden;
 }
 
 h1 {
-  color: #34495e;
-  transition: color 0.5s ease-in-out;
+  margin: 10px 0px;
+  font-size: 150px;
 }
 
-.btn {
-  cursor: pointer;
+h2 {
+  margin: 10px 0px;
+  font-size: 50px;
 }
-.clicked {
-  color: #7f8c8d;
+
+input {
+  margin: 15px 0px;
+  border: 0px;
+  border-bottom: 1px solid white;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  background-color: unset;
+}
+
+input::placeholder {
+  text-align: center;
+  color: white;
+}
+
+input:focus {
+  outline: none;
+}
+
+.input-todo {
+  width: 300px;
 }
 
 .form,
@@ -40,4 +68,34 @@ h1 {
   height: 100%;
   z-index: -1;
   animation: fadeIn 0.5s linear;
+}
+
+.js-toDoList {
+  width: 300px;
+  padding: 0px;
+  font-size: 30px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  padding: 0;
+  margin-right: 10px;
+  border: 0px;
+  cursor: pointer;
+  background-color: unset;
+}
+
+button:focus {
+  outline: none;
+}
+
+.js-weather {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
 }
